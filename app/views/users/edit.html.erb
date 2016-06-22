@@ -1,0 +1,40 @@
+
+
+<div id = "header">
+<h1>BEER BLOG</h1>
+</div>
+
+
+<div id="nav">
+	<ul>
+<li><%= link_to "REVIEW SOME BEER!", beers_path, method: :get %> </li>
+<li><%= link_to "DELETE ACCOUNT", user_path, method: :delete %> </li>
+
+	</ul>
+</nav>
+
+<div id = "validation">
+	<div id = "validation2">
+		</div>
+	<h3>EDIT USER</h3><link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+<%if @user == current_user%>
+				<%= form_for @user do |f|%>
+				<%=f.text_field :name, placeholder:"Name" %>
+				<br>
+				<br>
+				<%=f.email_field :email, placeholder:"Email" %>
+				<br>
+				<br>
+				<%=f.password_field :password, placeholder:"Password" %>
+				<br>
+				<br>
+				<%= f.submit :update %>
+	<% end %>
+<%else%>
+	<h1>ACCESS DENIED</h1>
+<% end %>
+</div>
+
+
+<div id="footer">Coppyright &copy; 2016</div>
+	

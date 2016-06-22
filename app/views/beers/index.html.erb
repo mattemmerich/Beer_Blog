@@ -1,0 +1,28 @@
+
+<div id ="header">
+	<h1>BEER BLOG</h1>
+</div> 
+
+<div id="nav">
+	<ul>
+
+		
+		<li><a <%= link_to "LOG OUT", logout_path %> </a></li><link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+		<!-- <li><a <%= link_to "CREATE ACCOUNT", new_user_path %> </a></li> -->
+		<li><a <%= link_to "EDIT ACCOUNT", edit_user_path(@profile) %> </a></li>
+		<!-- <li><a <%= link_to "REVIEW BEER", beers_path %> </a></li> -->
+	
+	</ul>
+</nav>
+
+
+
+<div id ="body">
+<% @beers.each do |beer| %></body>
+	<%= link_to beer.name, beer_path(beer) %>
+	<br>
+<% end %>
+</div>
+
+
+<div id="footer">Coppyright &copy; 2016</div>

@@ -1,0 +1,15 @@
+<div id = "container">
+</div>
+
+<div id = "header">
+<h1>BEER BLOG</h1>
+<%=link_to "Review Some Beer!", beers_path, method: :get %>
+<%=link_to "Edit", edit_user_path%>
+<%= @user.name %>
+<%= link_to "Log Out", logout_path, method: :delete %>
+</div>
+
+
+
+
+

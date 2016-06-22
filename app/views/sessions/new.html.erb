@@ -1,0 +1,29 @@
+<div id = "container">
+</div>
+
+<div id = "header">
+<h1>BEER BLOG</h1><link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+
+</div>
+
+
+
+
+<div id = "validation">
+	<div id = "validation2"></div>
+	<div id ="validation3">
+		<%= form_for(:session, url: login_path) do |f| %> 
+				<%=f.email_field :email, placeholder:"Email" %>
+				<br>
+				<br>
+				<%=f.password_field :password, placeholder:"Password" %>
+				<br>
+				<br>
+				<%=f.submit :Login %>
+				<br>
+				<br>
+				<%= link_to "Create New User", new_user_path %>
+			<% end %>
+	</div>
+</div>
+
